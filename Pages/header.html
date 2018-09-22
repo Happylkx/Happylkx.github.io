@@ -1,0 +1,92 @@
+<script>
+	//Baidu Analystics
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?dd3e1212f957ba994910cbeeb15e5c40";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topFixedNavbar1"><span
+				 class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+			<a class="navbar-brand" href="#">Happy</a>
+		</div>
+		<div class="collapse navbar-collapse" id="topFixedNavbar1">
+			<ul class="nav navbar-nav">
+				<li id="Tag_Home">
+					<a class="Relative_href" relative_href="index.html">Home</a>
+				</li>
+				<li id="Tag_History">
+					<a class="Relative_href" relative_href="history/index.html">History</a>
+				</li>
+				<li>
+					<a class="Relative_href" relative_href="Grades/index.html">School performance</a>
+				</li>
+			</ul>
+			<form class="navbar-form navbar-left" role="search">
+				<div class="form-group"> </div>
+			</form>
+			
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Contact me<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li>
+							<a href="tencent://message/?uin=496817033&Site=https://happylkx.github.io&Menu=yes">QQ</a>	
+						</li>
+						<li>
+							<a href="https://weibo.com/u/5206465727/">MicroBlog</a>	
+						</li>
+						</ul>
+					</li>
+
+				<li id="Tag_More">
+				  <a class="Relative_href" relative_href="Products/index.html">More...</a>
+				</li>
+			  <li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Links<span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+
+
+						<li class="divider"></li>
+						<li>
+							<a href="http://happyli.xiaopangkj.space/wordpress/2018/09/22/message-board/">Leave me a message</a>
+						</li>
+						<li> 
+							<a href="http://happylkx00.usa3v.net/">Another server(3v.do)</a> 
+						</li>
+						<li>
+							<a href="http://happyli.xiaopangkj.space/wordpress/">My Blog </a>
+						</li>
+						<li>
+							<a href="https://sites.google.com/site/happylkxnetwork/">Outer blog (Google site)</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<script>
+	//Home_Adress中为主页地址，在每个列表项的href前面添上前缀，这样迁移网站时不用手动修改每一处的地址
+
+	var Home_address = "https://happylkx.github.io/";
+
+	$('a').each(function(i) {
+		if ($(this).hasClass('Relative_href')) {
+			var relhref = $(this).attr("relative_href");
+			this.href = Home_address + relhref;
+		}
+	});
+</script>
+
+<script>
+	document.getElementById("Tag_" + currentpage).setAttribute("class", "active"); //在导航栏中设置当前页面项为选中状态
+	}
+</script>

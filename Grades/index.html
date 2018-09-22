@@ -1,0 +1,255 @@
+<!Doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+		<link href="https://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+		<title>School performance - Happylkx</title>
+		<div id="header"></div>
+	</head>
+	<script src="https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+	<script src="../resources/js/Global.js"></script>
+	<body>
+
+		<div style="height:60px"></div>
+		<h1>This page shows my school performance since 2016.</h1>
+
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation"><a href="#College" onclick="tabCollegeclk();" role="tab" data-toggle="tab">大学</a></li>
+			<li role="presentation" class="active"><a onclick="tabgradesclk();" href="#Highschool" role="tab" data-toggle="tab">高中</a></li>
+		</ul>
+
+
+		<!-- Tab panes-->
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane fade in active" id="Highschool">
+				<div style="width: 50%">
+					<canvas id="myChart" width="400" height="450"></canvas>
+				</div>
+				<hr />
+				<div id="GradesTable">
+				  <div class="alert alert-info">由于网速等原因，成绩表已直接写在html中。<br>
+						访问原版用sql的版本，点这里
+						<a href="http://happyli.xiaopangkj.space/service/getTable.php?Table=Grades">http://happyli.xiaopangkj.space/service/getTable.php?Table=Grades</a>
+					</div>
+					<div>
+					<table class="table table-hover table-striped" style="" border="1">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Points</th>
+								<th>Ranking</th>
+								<th>Chinese</th>
+								<th>Chinese_ranking</th>
+								<th>Maths</th>
+								<th>Maths_ranking</th>
+								<th>English</th>
+								<th>English_ranking</th>
+								<th>Physics</th>
+								<th>Physics_ranking</th>
+								<th>Chemistry</th>
+								<th>Chemistry_ranking</th>
+								<th>Biology</th>
+								<th>Biology_ranking</th>
+							</tr>
+						</thead>
+						<thead>
+						</thead>
+						<tbody>
+							<tr>
+							  <td>高一上期末</td>
+							  <td>640 </td>
+							  <td>10(含文科) </td>
+							  <td> 110</td>
+							  <td>&nbsp;</td>
+							  <td>135 </td>
+							  <td>&nbsp;</td>
+							  <td>131 </td>
+							  <td>&nbsp;</td>
+							  <td>100 </td>
+							  <td>&nbsp;</td>
+							  <td>86 </td>
+							  <td>&nbsp;</td>
+							  <td>78 </td>
+							  <td>&nbsp;</td>
+						  </tr>
+							<tr>
+								<td>高一下开学初考试</td>
+								<td>652</td>
+								<td>1</td>
+								<td>109</td>
+								<td>10</td>
+								<td>131</td>
+								<td>14</td>
+								<td>142.5</td>
+								<td>1</td>
+								<td>98</td>
+								<td>1</td>
+								<td>90</td>
+								<td>5</td>
+								<td>81.5</td>
+								<td>5</td>
+							</tr>
+							<tr>
+								<td>高一下期中</td>
+								<td>616</td>
+								<td>2</td>
+								<td>100</td>
+								<td>37</td>
+								<td>120</td>
+								<td>16</td>
+								<td>131</td>
+								<td>1</td>
+								<td>93</td>
+								<td>1</td>
+								<td>88</td>
+								<td>2</td>
+								<td>84</td>
+								<td>4</td>
+							</tr>
+							<tr>
+							  <td>高一下期末 </td>
+							  <td>642 </td>
+							  <td>2 </td>
+							  <td>112 </td>
+							  <td>&nbsp;</td>
+							  <td>138</td>
+							  <td>&nbsp;</td>
+							  <td>134 </td>
+							  <td>&nbsp;</td>
+							  <td>80</td>
+							  <td>&nbsp;</td>
+							  <td>93</td>
+							  <td>&nbsp;</td>
+							  <td>85</td>
+							  <td>&nbsp;</td>
+						  </tr>
+							<tr>
+								<td>高二开学初</td>
+								<td>609.5</td>
+								<td>3</td>
+								<td>107</td>
+								<td>39</td>
+								<td>134</td>
+								<td>12</td>
+								<td>139.5</td>
+								<td>1</td>
+								<td>78</td>
+								<td>9</td>
+								<td>71</td>
+								<td>7</td>
+								<td>80</td>
+								<td>11</td>
+							</tr>
+							<tr>
+								<td>高二上第一次月考</td>
+								<td>647.5</td>
+								<td>3</td>
+								<td>116</td>
+								<td>11</td>
+								<td>133</td>
+								<td>18</td>
+								<td>140.5</td>
+								<td>1</td>
+								<td>87</td>
+								<td>3</td>
+								<td>89</td>
+								<td>6</td>
+								<td>82</td>
+								<td>11</td>
+							</tr>
+							<tr>
+								<td>高二上期中</td>
+								<td>605</td>
+								<td>5</td>
+								<td>91</td>
+								<td>164</td>
+								<td>111</td>
+								<td>56</td>
+								<td>139</td>
+								<td>1</td>
+								<td>83</td>
+								<td>2</td>
+								<td>87</td>
+								<td>4</td>
+								<td>94</td>
+								<td>5</td>
+							</tr>
+							<tr>
+								<td>高二上期末</td>
+								<td>618</td>
+								<td>3</td>
+								<td>106</td>
+								<td>42</td>
+								<td>123</td>
+								<td>10</td>
+								<td>143</td>
+								<td>1</td>
+								<td>85</td>
+								<td>7</td>
+								<td>71</td>
+								<td>15</td>
+								<td>90</td>
+								<td>2</td>
+							</tr>
+							<tr>
+							  <td>高二下开学初考试</td>
+							  <td>610</td>
+							  <td>3</td>
+							  <td>105</td>
+							  <td>46</td>
+							  <td>118</td>
+							  <td>17</td>
+							  <td>140</td>
+							  <td>3</td>
+							  <td>92</td>
+							  <td>1</td>
+							  <td>85</td>
+							  <td>3</td>
+							  <td>70</td>
+							  <td>1</td>
+						  </tr>
+							<tr>
+							  <td>高二下期末 </td>
+							  <td>635.5 </td>
+							  <td>3 </td>
+							  <td>109 </td>
+							  <td>&nbsp;</td>
+							  <td>135 </td>
+							  <td>&nbsp;</td>
+							  <td>140.5</td>
+							  <td>&nbsp;</td>
+							  <td>89</td>
+							  <td>&nbsp;</td>
+							  <td>81</td>
+							  <td>&nbsp;</td>
+							  <td>81</td>
+							  <td>&nbsp;</td>
+						  </tr>
+						</tbody>
+					</table>
+					</div>
+					<div align="center">
+						Highest: <span style="color: #FE2E31">652</span> <br />
+						
+						Lowest:<span style="color: #3FFE0C">584</span><br />
+						Average:<span style="color: #3253F8">626.6</span><br />
+					</div>
+				</div>
+			</div>
+			<div role="tabpanel" class="tab-pane fade" id="College">
+			</div>
+		</div>
+
+	</body>
+	<script src="js/grades.js"></script>
+	<div id="footer"></div>
+
+	<script>
+		$("#footer").load("../Pages/footer.html");
+		$("#header").load("../Pages/header.html");
+	</script>
+</html>
