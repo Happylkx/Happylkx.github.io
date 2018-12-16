@@ -1,4 +1,3 @@
-
   .download-text{
   	opacity:0;
   	  transition: opacity 1s;
@@ -17,5 +16,8 @@
   		width:150px;
   	}
   	.btn-download:hover .download-text{
-  		opacity:1
+  		opacity:1;
   	}
+.list-download{
+	float: right;
+}
