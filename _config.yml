@@ -21,7 +21,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "https://scholar.googleusercontent.com/citations?view_op=medium_photo"
+  avatar           : "https://avatars.githubusercontent.com/u/10860589?s=400&u=0ef942a5964dd883717024fbce708f46989faace&v=4"
   name             : "LI Kaixin"
   pronouns         : # example: "she/her"  
   bio              : #"Short biography for the left-hand sidebar"
